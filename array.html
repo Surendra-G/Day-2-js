@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Array Manipulation</h1>
+    <script>
+        const person = [
+            {name: "Surendra", age: 18},
+            {name: "Subash", age: 22},
+            {name: "kushal", age: 16},
+            {name: "Lack", age: 23},
+            {name: "Hero", age: 28},
+            {name: "Tom", age: 18},
+            {name: "Thomas", age: 24},
+        ];
+
+        //examples of the filter
+        const filtredPerson = person.filter(function(items){
+            return items.age > 20;
+        })
+        console.log(person)
+        console.log(filtredPerson);
+
+        //examples of the map
+        //creating a new array consisting names of the person
+        const mapedperson = person.map(function(items){
+            return items.name;
+
+        });
+        console.log(mapedperson)
+
+        //creating a new array consisting ages of the person
+        const ageperson = person.map(function(items){
+            return items.age;
+        });
+        console.log(ageperson);
+
+        //finding the array through it's value
+        const founditems = person.find(function(items){
+            return items.name === "Surendra";
+        })
+        console.log(founditems);
+
+        // using the forEach function
+        person.forEach(function(items){
+            console.log(items.name);
+            console.log(items.age);
+        })
+
+        //using reduce function
+        const roll = [10, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+        const reduceitems = roll.reduce(function(total, items){
+            return total + items; 
+        })
+        console.log(reduceitems)
+    </script>
+</body>
+</html>
